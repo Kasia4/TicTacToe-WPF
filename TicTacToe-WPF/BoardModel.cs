@@ -13,7 +13,7 @@ namespace TicTacToe_WPF
         O
     };
 
-    class Model
+    class BoardModel
     {
         //TODO: change to parameterized size
         private int gameSize = 3;
@@ -22,6 +22,10 @@ namespace TicTacToe_WPF
             get;
         }
 
+        public int GameSize
+        {
+            get;
+        }
         public FieldType[] Board;
 
         private int getIndex(int column, int row)
@@ -29,7 +33,7 @@ namespace TicTacToe_WPF
             return row * gameSize + column;
         }
 
-        public Model()
+        public BoardModel()
         {
             PlayerSigns = new List<FieldType>
             {
